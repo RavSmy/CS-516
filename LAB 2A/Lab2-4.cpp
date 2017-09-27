@@ -25,7 +25,7 @@ void tenbin(int binary[], int start) {
 
 
 
-/*OUTPUT*/
+/*OUTPUT
 Input an binary separated by spaces: 0 1 0 1 1 0 1 0
 01011011
 01011100
@@ -49,3 +49,5 @@ Input an binary separated by spaces: 0 0 0 0 0 0 0 0
 00001001
 00001010
 Press any key to continue . . .
+
+*/
