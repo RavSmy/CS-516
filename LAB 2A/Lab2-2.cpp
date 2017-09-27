@@ -19,7 +19,7 @@ int fib(int n) {
 	return fib(n - 1) + fib(n - 2);
 }
 
-/*OUTPUT*/
+/*OUTPUT
 7
 Answer: 13
 2
@@ -29,3 +29,5 @@ Answer: 144
 21
 Answer: 10946
 Press any key to continue . . .
+
+*/
