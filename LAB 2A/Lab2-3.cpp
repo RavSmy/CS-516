@@ -32,7 +32,7 @@ void tenoct(int oct[]) {
 }
 
 
-/*OUTPUT*/
+/*OUTPUT
 Input, separated by spaces: 1 2 3 4
 1235
 1236
@@ -56,3 +56,4 @@ Input, separated by spaces: 3 4 5 6
 3467
 3470
 Press any key to continue . . .
+*/
