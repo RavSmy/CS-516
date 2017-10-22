@@ -1,3 +1,7 @@
+Assignment 3
+
+10/22/2017 9:35 PM
+
 /*SOURCE CODE*/
 #include<stdio.h>
 #include<stdlib.h>
