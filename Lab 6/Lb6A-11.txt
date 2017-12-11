@@ -1,0 +1,69 @@
+PROBLEM # 11
+
+BR main
+num: .equate 0
+main:    SUBSP 2,i
+         DECI num,s
+if:      LDWA num,s
+         ANDA 0x0001,i
+         BRNE    else
+         STRO even_msg,d
+         BR endIf
+else:    STRO odd_msg,d
+endIf:   ADDSP 2,i
+         STOP
+odd_msg: .ASCII "The number is odd\x00"
+even_msg: .ASCII "The number is even\x00"
+.END
+
+PROBLEM #12
+
+         BR      main        
+limit:  .EQUATE  5          
+num:    .EQUATE  0
+;
+main:    subsp   2,i
+         deci    num,s
+while:   ldwa    num,s     
+         CPBA    limit,i       
+         BREQ    endWh  
+
+         ADDA    1,i
+         STWA    num,s    
+         DECO    num,s  
+         LDBX    '\n',i
+         STBX    0xFC16,d 
+
+         BR      while       
+endWh:   STOP                
+         .END                  
+
+PROBLEM #13
+
+br main
+char: .block 1
+
+main: ldba charIn,d
+stba char,d
+if:      LDBA 'A',d
+         CPBA char,i
+         BRGT elseif
+         LDBA char,d
+         CPBA 'Z',i
+         BRGT elseif
+then:    ldba 'A',i
+         stba charOut, d
+         BR  endif
+elseif:  LDBA 'a',d
+         CPBA char,i
+         BRGT else
+         LDBA char,d
+         CPBA 'z',i
+         BRGT else
+then1:   ldba 'a',i
+         stba charOut, d
+         BR  endif
+else:    ldba '$',i
+         stba charOut,d 
+endif:   STOP
+.END

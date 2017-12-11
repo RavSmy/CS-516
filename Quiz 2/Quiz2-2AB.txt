@@ -1,0 +1,2 @@
+They both work the same since the line .ASCII loads the characters through the string, 
+while ADDSP loads characters through the hex -> ascii code

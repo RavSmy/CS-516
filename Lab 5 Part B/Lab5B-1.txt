@@ -1,0 +1,4 @@
+A and B output correctly for both hex and dec since they are within range. 
+However, for C and D, they start to get out of the range of dec and so the 
+number comes out negative and wrong. For D, the number 200123 is too large 
+for hex, so the output is incorrect there as well. 

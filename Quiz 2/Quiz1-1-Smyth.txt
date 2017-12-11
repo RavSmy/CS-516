@@ -1,0 +1,20 @@
+; Changes signified by ** ** in comments.  
+        BR        main
+xtrcrdt:         .EQUATE 13   ;constant
+Quiz1:           .BLOCK 2    ;global variable #2d 
+Quiz2:           .BLOCK 2    ;global variable #2d 
+Points:          .BLOCK 2    ;global variable #2d        
+main:    DECI    Quiz1,d     ;**DECI is needed to get input from user**
+         DECI    Quiz2,d
+         LDWA    Quiz1, d 
+         ADDA    Quiz2, d    ;Points = Quiz1 + Quiz2
+         ASRA                ;Points = Points/2   **We are dividing by 2, not 4 to get the average**
+         ADDA    xtrcrdt,i 
+         STWA    Points,d
+         STRO    msg,d       ;printf("Points = %d\n", Points)
+         DECO    Points,d
+         LDBA    '\n',i
+         STBA    charOut,d
+         STOP
+msg:     .ASCII  "Points = \x00"
+         .END
